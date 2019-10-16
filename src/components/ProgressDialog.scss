@@ -1,0 +1,27 @@
+@import "../fonts.scss";
+@import "../variables.scss";
+
+.progress-dialog{
+    background: #424242;
+    border-radius: 4px;
+    color: #fff;
+    padding: 16px;
+    position: relative;
+    text-align: center;
+    margin: 0 0 11px;
+    font-size: 16px;
+    strong{
+        color: #fff; 
+    }
+    &:after{
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: 7px solid #424242;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        bottom: -7px;
+        right: 12%;
+    }
+}

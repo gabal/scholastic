@@ -1,0 +1,29 @@
+@import "../fonts.scss";
+@import "../variables.scss";
+
+.donation-input {
+    position: relative;
+    input {
+        padding-left: 23px;
+        color: #424242;
+        font-weight: bold;
+        border: 1px solid #dcdcdc;
+        border-radius: 4px;
+        position: relative;
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+        @include strong-font();
+    }
+    &:before {
+        content: "$";
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        color: #828282;
+        position: absolute;
+        top: 15px;
+        z-index: 1;
+        left: 9px;
+        font-size: 17px;
+    }
+}

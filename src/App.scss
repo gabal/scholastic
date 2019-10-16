@@ -1,0 +1,76 @@
+@import "fonts.scss";
+@import "variables.scss";
+* {
+    @include main-font();
+    box-sizing: border-box;
+    color: $main-font-color;
+    outline-color: $highlight-color;
+}
+
+button,
+strong {
+    @include strong-font();
+}
+a {
+    @include italic-font();
+}
+.highlight {
+    color: $highlight-color;
+}
+
+.app-container {
+    max-width: $max-page-width;
+    margin: 40px auto 60px;
+}
+
+.box {
+    border: 1px solid #dcdcdc;
+    position: relative;
+    padding: 0px 20px 19px;
+    font-size: 14px;
+    line-height: 20px;
+    p {
+        padding: 0px 2px;
+    }
+    &.bottom {
+        margin-top: -1px;
+    }
+    &:after {
+        content: "";
+        background: #f4f4f4;
+        display: block;
+        height: 2px;
+        position: absolute;
+        bottom: -3px;
+        left: -1px;
+        right: -1px;
+    }
+}
+.column-left,
+.column-right {
+    margin: 10px 0;
+}
+
+@media only screen and (min-width: 500px) {
+    .column-left,
+    .column-right {
+        width: 50%;
+        margin: 0;
+    }
+    .column-left {
+        float: left;
+        padding-right: 9px;
+    }
+    .column-right {
+        float: right;
+        padding-left: 9px;
+    }
+    .column-container {
+        overflow: hidden;
+        padding: 3px 4px 7px;
+        margin: 0 -4px;
+        &.last-row {
+        margin-top: 10px;
+        }
+    }
+}

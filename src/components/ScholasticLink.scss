@@ -1,0 +1,11 @@
+@import "../fonts.scss";
+@import "../variables.scss";
+
+.scholastic-link {
+    color: $link-color;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+        text-decoration: underline;
+    }
+}

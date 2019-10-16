@@ -1,0 +1,42 @@
+@import "../fonts.scss";
+@import "../variables.scss";
+
+.progress-bar{
+    background: #fafafa;
+    height: 14px;
+    border: 1px solid #dcdcdc;
+    position: relative;
+    &:before{
+        top:0;
+        left: 0;
+        content: '';
+        height: 2px;
+        width: 100%;
+        background: #f6f5f5;
+        position: absolute;
+    }
+}
+
+.bar{
+    background: $highlight-color;
+    height: 12px;
+    position: relative;
+    &:before{
+        top: 0;
+        left: 0;
+        content: '';
+        height: 1px;
+        width: 100%;
+        background: $highlight-brightness-color;
+        position: absolute;
+    }
+    &:after{
+        top: 0;
+        bottom: 0;
+        right: 0;
+        content: '';
+        width: 1px;
+        background: $highlight-reflect-color;
+        position: absolute;
+    }
+}
